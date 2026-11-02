@@ -1,4 +1,3 @@
-
 def deposit(user, amount):
     if amount <= 0:
         print("Amount must be positive.")
@@ -8,7 +7,6 @@ def deposit(user, amount):
     record_transaction(user, "deposit", amount)
 
     return user["balance"]
-
 
 def withdraw(user, amount):
     if amount <= 0:
@@ -24,10 +22,8 @@ def withdraw(user, amount):
 
     return user["balance"]
 
-
 def check_balance(user):
     return user["balance"]
-
 
 def record_transaction(user, transaction_type, amount):
     transaction = {
@@ -37,7 +33,6 @@ def record_transaction(user, transaction_type, amount):
     }
 
     user["transactions"].append(transaction)
-
 
 def generate_summary(user):
     total_deposited = 0
@@ -62,7 +57,6 @@ def generate_summary(user):
     print(f"Total withdrawn: {total_withdrawn}")
     print(f"Final balance: {user['balance']}")
     print("===============================")
-
 
 
 user = {

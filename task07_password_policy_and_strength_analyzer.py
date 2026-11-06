@@ -2,26 +2,21 @@
 def check_length(password, min_length=8):
     return len(password) >= min_length
 
-
 # 2. Check uppercase letters
 def check_uppercase(password):
     return any(char.isupper() for char in password)
-
 
 # 3. Check lowercase letters
 def check_lowercase(password):
     return any(char.islower() for char in password)
 
-
 # 4. Check digits
 def check_digits(password):
     return any(char.isdigit() for char in password)
 
-
 # 5. Check special characters
 def check_special(password):
     return any(not char.isalnum() for char in password)
-
 
 # Analyze the password
 def analyze_password(password, min_length=8):
